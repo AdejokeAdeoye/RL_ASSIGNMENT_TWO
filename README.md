@@ -8,7 +8,7 @@
 - [Methodology](#methodology)
   - [Estimating the Value Functions](#estimating-the-value-functions)
   - [Estimating the Policy Functions](#estimating-the-policy-functions)
-
+- [Conclusion](#conclusion)
 
 ## Introduction
 This project focuses on solving a grid world problem using various reinforcement learning techniques. The grid world is a classic environment used in reinforcement learning where an agent navigates a grid to reach certain goals or avoid obstacles and to maximize cumulative rewards. In this project, the aim is to find the optimal policy for the agent by employing three distinct techniques: explicitly solving the Bellman optimality equation, policy iteration with iterative policy evaluation, and value iteration.
@@ -19,5 +19,8 @@ Each cell in the 5 × 5 grid represents a distinct state of the grid world. An a
 - The Blue state at (0, 1) yields a reward of 5 and jumps to the red state at (4, 2).
 - The Green state at (0, 4) yields a reward of 2.5 and jumps to either the red state at (4, 2) or the yellow state at (4, 4) with equal probability.
 - The agent receives a reward of -0.5 for attempting to move off the grid.
+
+## Conclusion
+All three methods (explicitly solving the Bellman optimality equation, policy iteration, and value iteration) produced similar optimal policies. This consistency is expected as all methods are grounded in the principles of Bellman’s equations. The optimal policies derived from each approach guide the agent towards maximizing cumulative rewards by strategically navigating the grid world environment.
 
 
