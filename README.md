@@ -5,6 +5,10 @@
 ## Table of Contents
 - [Introduction](#introduction)
 - [Project Environment](#project-environment)
+- [Methodology](#methodology)
+  - [Estimating the Value Functions](#estimating-the-value-functions)
+  - [Estimating the Policy Functions](#estimating-the-policy-functions)
+
 
 ## Introduction
 This project focuses on solving a grid world problem using various reinforcement learning techniques. The grid world is a classic environment used in reinforcement learning where an agent navigates a grid to reach certain goals or avoid obstacles and to maximize cumulative rewards. In this project, the aim is to find the optimal policy for the agent by employing three distinct techniques: explicitly solving the Bellman optimality equation, policy iteration with iterative policy evaluation, and value iteration.
