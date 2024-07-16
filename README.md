@@ -4,18 +4,16 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Project Objectives](#project-objectives)
 - [Project Environment](#project-environment)
-- [Bellman Optimality Equation](#bellman-optimality-equation)
-- [Policy Iteration](#policy-iteration)
-- [Value Iteration](#value-iteration)
-- [Methodology](#methodology)
-  - [Estimating the Value Functions](#estimating-the-value-functions)
-  - [Estimating the Policy Functions](#estimating-the-policy-functions)
-- [Results](#results)
-  - [Value Functions](#value-functions)
-  - [Policy Functions](#policy-functions)
-- [Optimal Policy Learning in a Modified Grid World](#optimal-policy-learning-in-a-modified-grid-world)
-- [Environment Setup](#environment-setup)
-- [Conclusion](#conclusion)
-- [References](#references)
+
+## Introduction
+This project focuses on solving a grid world problem using various reinforcement learning techniques. The grid world is a classic environment used in reinforcement learning where an agent navigates a grid to reach certain goals or avoid obstacles and to maximize cumulative rewards. In this project, the aim is to find the optimal policy for the agent by employing three distinct techniques: explicitly solving the Bellman optimality equation, policy iteration with iterative policy evaluation, and value iteration.
+
+## Project Environment
+Each cell in the 5 × 5 grid represents a distinct state of the grid world. An agent within this environment can move up, down, left, or right. If the agent attempts to step off the grid, it remains in the same position, resulting in a reward of −0.5. Moving between white squares yields 0 rewards. The grid includes special states (blue, green, red, and yellow squares) that introduce unique behaviors and rewards describes as follows:
+
+- The Blue state at (0, 1) yields a reward of 5 and jumps to the red state at (4, 2).
+- The Green state at (0, 4) yields a reward of 2.5 and jumps to either the red state at (4, 2) or the yellow state at (4, 4) with equal probability.
+- The agent receives a reward of -0.5 for attempting to move off the grid.
+
+
