@@ -32,7 +32,7 @@ The project consists of the following files:
 To run the code, you need the following Python packages:
 - numpy
 - matplotlib
-- 
+
 You can install the required packages using:
 ```bash
 pip install numpy matplotlib
@@ -50,6 +50,29 @@ This method involves iteratively evaluating a given policy and improving it unti
 Combines the processes of policy evaluation and improvement into a single step, iteratively updating the value function until convergence. This method is often more efficient than policy iteration and can handle larger state spaces effectively.
 
 ## Results
+
+#### Value Function
+1. **Explicitly Solving the Bellman Optimality Equation**
+The values indicate the expected cumulative reward from each state under the optimal policy.
+ ```
+   [[-0.95421     0.0000000  -0.53544513 -0.54288433  0.0000000]
+    [-1.05667474 -0.63443929 -0.64986056 -0.68118352 -0.73491793]
+    [-1.27751699 -0.96478801 -0.88518704 -0.94047832 -1.15197405]
+    [-1.55372338 -1.26512197 -1.17197646 -1.24156411 -1.49673096]
+    [-1.91931506 -1.63634149 -1.5427646  -1.6184526  -1.88544018]]
+   ```
+2. **Policy Iteration**
+The value function is iteratively updated based on the current policy until convergence.
+
+   ```
+   [[ 2.17050563  4.73313425  2.06972222  1.2647418   1.77863494]
+    [ 1.11758774  1.78163063  1.17357347  0.73864619  0.5619511 ]
+    [ 0.16233064  0.4774194   0.35149327  0.10995335 -0.18667498]
+    [-0.54743232 -0.28517851 -0.28086782 -0.44038779 -0.74479522]
+    [-1.10830381 -0.84979943 -0.80844074 -0.93845676 -1.23770453]]
+   ```
+
+#### Policy Functions
 
 ## Conclusion
 All three methods (explicitly solving the Bellman optimality equation, policy iteration, and value iteration) produced similar optimal policies. This consistency is expected as all methods are grounded in the principles of Bellman’s equations. The optimal policies derived from each approach guide the agent towards maximizing cumulative rewards by strategically navigating the grid world environment.
