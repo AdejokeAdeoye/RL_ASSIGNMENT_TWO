@@ -25,13 +25,13 @@ Each cell in the 5 × 5 grid represents a distinct state of the grid world ( def
 ## Techniques
 
 #### Bellman Optimality Equation
-Determining the action that maximizes the value function for each state. 
+This determines the action that maximizes the value function for each state. 
 
 #### Policy Iteration
-Iteratively evaluating the current policy and updating the value function until it converges.
+It iteratively evaluating the current policy and updating the value function until it converges.
 
 #### Value Iteration
-Combining both policy evaluation and improvement in each step, iteratively updating the value function until it converges.
+Combines both policy evaluation and improvement in each step, iteratively updating the value function until it converges.
 
 ## Conclusion
 All three methods (explicitly solving the Bellman optimality equation, policy iteration, and value iteration) produced similar optimal policies. This consistency is expected as all methods are grounded in the principles of Bellman’s equations. The optimal policies derived from each approach guide the agent towards maximizing cumulative rewards by strategically navigating the grid world environment.
