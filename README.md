@@ -72,7 +72,53 @@ The value function is iteratively updated based on the current policy until conv
     [-1.10830381 -0.84979943 -0.80844074 -0.93845676 -1.23770453]]
    ```
 
+3. **Value Iteration**
+
+Value iteration combines policy evaluation and improvement in each step to iteratively update the value function until convergence.
+
+   ```
+   [[ 2.17050563  4.73313425  2.06972222  1.2647418   1.77863494]
+    [ 1.11758774  1.78163063  1.17357347  0.73864619  0.5619511 ]
+    [ 0.16233064  0.4774194   0.35149327  0.10995335 -0.18667498]
+    [-0.54743232 -0.28517851 -0.28086782 -0.44038779 -0.74479522]
+    [-1.10830381 -0.84979943 -0.80844074 -0.93845676 -1.23770453]]
+
+
 #### Policy Functions
+
+1. **Explicitly Solving the Bellman Optimality Equation**
+
+   ```
+   [[1 0 1 2 0]
+    [3 2 2 3 1]
+    [0 0 0 3 1]
+    [1 1 0 3 0]
+    [3 2 2 2 0]]
+   ```
+
+2. **Policy Iteration**
+
+   This method involves alternating between policy evaluation and policy improvement until the policy converges to the optimal strategy.
+
+   ```
+   [[3 0 2 2 0]
+    [0 0 0 0 2]
+    [0 0 0 0 0]
+    [0 0 0 0 0]
+    [0 0 2 0 0]]
+   ```
+
+3. **Value Iteration**
+
+   Value iteration combines policy evaluation and improvement in each step to derive the optimal policy.
+
+   ```
+   [[3 0 2 2 0]
+    [0 0 0 0 2]
+    [0 0 0 0 0]
+    [0 0 0 0 0]
+    [0 0 2 0 0]]
+   ```
 
 ## Conclusion
 All three methods (explicitly solving the Bellman optimality equation, policy iteration, and value iteration) produced similar optimal policies. This consistency is expected as all methods are grounded in the principles of Bellman’s equations. The optimal policies derived from each approach guide the agent towards maximizing cumulative rewards by strategically navigating the grid world environment.
