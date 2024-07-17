@@ -5,6 +5,7 @@
 ## Table of Contents
 - [Introduction](#introduction)
 - [Project Environment](#project-environment)
+- [ Project Structure](#project-structure)
 - [Techniques](#techniques)
   - [Bellman Optimality Equation](#bellman-optimality-equation)
   - [Policy Iteration](#policy-iteration)
@@ -22,16 +23,33 @@ Each cell in the 5 × 5 grid represents a distinct state of the grid world ( def
 - The Green state at (0, 4) yields a reward of 2.5 and jumps to either the red state at (4, 2) or the yellow state at (4, 4) with equal probability.
 - The agent receives a reward of -0.5 for attempting to move off the grid.
 
+## Project Structure
+
+The project consists of the following files:
+
+- `GridWorldProblem.ipynb`: Jupyter Notebook containing the implementation of RL techniques for the grid world problem.
+
+## Setup
+### Requirements
+To run the code, you need the following Python packages:
+- numpy
+- matplotlib
+
+You can install the required packages using:
+```bash
+pip install numpy matplotlib
+```
+
 ## Techniques
 
 #### Bellman Optimality Equation
-This determines the action that maximizes the value function for each state. 
+We derive a system of linear equations from the Bellman optimality equation and solve it to find the optimal value function. This method provides a direct approach to determining the optimal policy.
 
 #### Policy Iteration
-It iteratively evaluating the current policy and updating the value function until it converges.
+This method involves iteratively evaluating a given policy and improving it until the policy becomes stable. Policy iteration alternates between policy evaluation, where the value function is computed for a fixed policy, and policy improvement, which is updated based on the current value function.
 
 #### Value Iteration
-Combines both policy evaluation and improvement in each step, iteratively updating the value function until it converges.
+Combines the processes of policy evaluation and improvement into a single step, iteratively updating the value function until convergence. This method is often more efficient than policy iteration and can handle larger state spaces effectively.
 
 ## Results
 
