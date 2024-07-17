@@ -57,79 +57,37 @@ This method involves iteratively evaluating a given policy and improving it unti
 Combines the processes of policy evaluation and improvement into a single step, iteratively updating the value function until convergence. This method is often more efficient than policy iteration and can handle larger state spaces effectively.
 
 ## Results
-
 #### Value Function
 1. **Explicitly Solving the Bellman Optimality Equation**
 Row 0 column 1 corresponding to the blue special state and row 0 column 4 have the highest value functions. Below are the results of the entire grid (all 25 states).
- ```
-   [[-0.95421     0.0000000  -0.53544513 -0.54288433  0.0000000]
-    [-1.05667474 -0.63443929 -0.64986056 -0.68118352 -0.73491793]
-    [-1.27751699 -0.96478801 -0.88518704 -0.94047832 -1.15197405]
-    [-1.55372338 -1.26512197 -1.17197646 -1.24156411 -1.49673096]
-    [-1.91931506 -1.63634149 -1.5427646  -1.6184526  -1.88544018]]
-   ```
 2. **Policy Iteration**
-Row 0 column 1 corresponding to the blue special state and row 0 column 4 have the highest value functions as shown below:
-
-   ```
-   [[ 2.17050563  4.73313425  2.06972222  1.2647418   1.77863494]
-    [ 1.11758774  1.78163063  1.17357347  0.73864619  0.5619511 ]
-    [ 0.16233064  0.4774194   0.35149327  0.10995335 -0.18667498]
-    [-0.54743232 -0.28517851 -0.28086782 -0.44038779 -0.74479522]
-    [-1.10830381 -0.84979943 -0.80844074 -0.93845676 -1.23770453]]
-   ```
-
+Row 0 column 1 corresponding to the blue special state and row 0 column 4 have the highest value functions.
 3. **Value Iteration**
-
 This is similar to the that of policy iteration, row 0 column 1 corresponding to the blue special state has the highest value function.
-
-   ```
-   [[ 2.17050563  4.73313425  2.06972222  1.2647418   1.77863494]
-    [ 1.11758774  1.78163063  1.17357347  0.73864619  0.5619511 ]
-    [ 0.16233064  0.4774194   0.35149327  0.10995335 -0.18667498]
-    [-0.54743232 -0.28517851 -0.28086782 -0.44038779 -0.74479522]
-    [-1.10830381 -0.84979943 -0.80844074 -0.93845676 -1.23770453]]
- ```
-
 #### Policy Functions
 The optimal policy is derived by solving the Bellman optimality equations and determining the action that maximizes the value function for each state.
-
 1. **Explicitly Solving the Bellman Optimality Equation**
-
- The resulting policy function is consistent with the expected behavior, directing the agent towards states with higher rewards as shown:  
-   ```
-   [[1 0 1 2 0]
-    [3 2 2 3 1]
-    [0 0 0 3 1]
-    [1 1 0 3 0]
-    [3 2 2 2 0]]
-   ```
-
+The resulting policy function is consistent with the expected behavior, directing the agent towards states with higher rewards.
 2. **Policy Iteration**
-
 This produced an optimal policy that aligns closely with the results obtained from explicitly solving the Bellman equations. Here, the technique ensures that the policy converges to the optimal strategy, emphasizing actions that lead to higher cumulative rewards.
-
-   ```
-   [[3 0 2 2 0]
-    [0 0 0 0 2]
-    [0 0 0 0 0]
-    [0 0 0 0 0]
-    [0 0 2 0 0]]
-   ```
-
 3. **Value Iteration**
-
 This yielded an optimal policy that is similar to those obtained from the other methods.
 
-   ```
-   [[3 0 2 2 0]
-    [0 0 0 0 2]
-    [0 0 0 0 0]
-    [0 0 0 0 0]
-    [0 0 2 0 0]]
-   ```
+#### Monte Carlo Method with Exploring Starts
+The optimal policy derived using the Monte Carlo Method with Exploring Starts method showed a clear preference for actions that led the agent to high-reward states (blue and green) while avoiding terminal states. Value function visualizations indicated higher values around the special states, confirming the effectiveness of the policy.
+
+#### Monte Carlo Method with ϵ-Soft Policy
+The epsilon-soft approach resulted in a more exploratory policy, ensuring that all actions were sufficiently explored. The resulting policy was slightly different, but still converged towards favoring high-reward actions.
+
+#### Behavior Policy with Importance Sampling
+The use of importance sampling weights allowed for effective policy learning even with a behavior policy. The optimal policy closely matched that obtained from the on-policy methods, validating the approach.
+
+#### Policy Iteration with State Permutations
+The policy iteration method considering state permutations resulted in a more robust policy that could adapt to the dynamic environment. The value function showed a smoother gradient, reflecting the agent’s adaptability to the stochastic changes in the environment.
 
 ## Conclusion
-All three methods (explicitly solving the Bellman optimality equation, policy iteration, and value iteration) produced similar optimal policies. This consistency is expected as all methods are grounded in the principles of Bellman’s equations. The optimal policies derived from each approach guide the agent towards maximizing cumulative rewards by strategically navigating the grid world environment.
+In part 1, All three methods (explicitly solving the Bellman optimality equation, policy iteration, and value iteration) produced similar optimal policies. This consistency is expected as all methods are grounded in the principles of Bellman’s equations. The optimal policies derived from each approach guide the agent towards maximizing cumulative rewards by strategically navigating the grid world environment.
+
+In the second part of the analysis, The Monte Carlo methods, both with exploring starts and epsilon-soft approaches, provided reliable policies by ensuring sufficient exploration. The off-policy control method effectively utilized importance sampling to learn from a behaviour policy. The policy iteration with state permutations highlighted the importance of adaptability in dynamic environments, leading to a robust policy that could handle stochastic changes.
 
 
