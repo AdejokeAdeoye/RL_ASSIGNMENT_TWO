@@ -20,6 +20,31 @@ Each cell in the 5 × 5 grid represents a distinct state of the grid world. An a
 - The Green state at (0, 4) yields a reward of 2.5 and jumps to either the red state at (4, 2) or the yellow state at (4, 4) with equal probability.
 - The agent receives a reward of -0.5 for attempting to move off the grid.
 
+### Python Function for Bellman Optimality Equation
+- `bellman_optimality_eq(env, gamma=0.9)`
+
+## Policy Iteration
+Policy iteration involves two main steps: policy evaluation and policy improvement.
+
+1. **Policy Evaluation**: Evaluate the value function \( V^\pi(s) \) for a given policy \( \pi \):
+
+\[ V^\pi(s) = \sum_{a} \pi(a|s) \sum_{s'} P(s'|s,a) \left[ R(s,a,s') + \gamma V^\pi(s') \right] \]
+
+2. **Policy Improvement**: Improve the policy by acting greedily with respect to the value function:
+
+\[ \pi'(s) = \arg\max_a \sum_{s'} P(s'|s,a) \left[ R(s,a,s') + \gamma V^\pi(s') \right] \]
+
+### Python Functions for Policy Iteration
+- `policy_iteration(env, gamma=0.9)`
+
+## Value Iteration
+Value iteration updates the value function directly using the Bellman optimality equation:
+
+\[ V(s) \leftarrow \max_a \sum_{s'} P(s'|s,a) \left[ R(s,a,s') + \gamma V(s') \right] \]
+
+This process is repeated until the value function converges.
+
+
 ## Conclusion
 All three methods (explicitly solving the Bellman optimality equation, policy iteration, and value iteration) produced similar optimal policies. This consistency is expected as all methods are grounded in the principles of Bellman’s equations. The optimal policies derived from each approach guide the agent towards maximizing cumulative rewards by strategically navigating the grid world environment.
 
