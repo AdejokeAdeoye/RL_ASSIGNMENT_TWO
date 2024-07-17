@@ -10,6 +10,10 @@
   - [Bellman Optimality Equation](#bellman-optimality-equation)
   - [Policy Iteration](#policy-iteration)
   - [Value Iteration](#value-iteration)
+  - [Monte Carlo Method with Exploring Starts](#Monte-Carlo-Method-with-Exploring-Starts)
+  - [Monte Carlo Method with ϵ-Soft Policy](#Monte-Carlo-Method-with-ϵ-Soft-Policy)
+  - [Behavior Policy with Importance Sampling](#Behavior-Policy-with-Importance-Sampling)
+  - [Policy Iteration with State Permutations](#Policy-Iteration-with-State-Permutations)
 - [Results](#results)
 - [Conclusion](#conclusion)
 
@@ -22,6 +26,9 @@ Each cell in the 5 × 5 grid represents a distinct state of the grid world ( def
 - The Blue state at (0, 1) yields a reward of 5 and jumps to the red state at (4, 2).
 - The Green state at (0, 4) yields a reward of 2.5 and jumps to either the red state at (4, 2) or the yellow state at (4, 4) with equal probability.
 - The agent receives a reward of -0.5 for attempting to move off the grid.
+
+In part 2, the environment has been modified to include two terminal states defined at (4, 0) and (2, 4), where the episode terminates upon reaching these states, with a reward of 0. Also, in this part, the agent receives a reward of -0.2 for moving between white cells, and a reward of -0.5 for attempting to move off the grid.
+
 
 ## Project Structure
 
