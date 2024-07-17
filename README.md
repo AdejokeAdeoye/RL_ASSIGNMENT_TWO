@@ -28,13 +28,11 @@ Each cell in the 5 × 5 grid represents a distinct state of the grid world ( def
 The project consists of the following files:
 
 - `GridWorldProblem.ipynb`: Jupyter Notebook containing the implementation of RL techniques for the grid world problem.
-
-## Setup
 ### Requirements
 To run the code, you need the following Python packages:
 - numpy
 - matplotlib
-
+- 
 You can install the required packages using:
 ```bash
 pip install numpy matplotlib
