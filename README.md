@@ -53,7 +53,7 @@ Combines the processes of policy evaluation and improvement into a single step, 
 
 #### Value Function
 1. **Explicitly Solving the Bellman Optimality Equation**
-The values indicate the expected cumulative reward from each state under the optimal policy.
+Row 0 column 1 corresponding to the blue special state and row 0 column 4 have the highest value functions. Below are the results of the entire grid (all 25 states).
  ```
    [[-0.95421     0.0000000  -0.53544513 -0.54288433  0.0000000]
     [-1.05667474 -0.63443929 -0.64986056 -0.68118352 -0.73491793]
@@ -62,7 +62,7 @@ The values indicate the expected cumulative reward from each state under the opt
     [-1.91931506 -1.63634149 -1.5427646  -1.6184526  -1.88544018]]
    ```
 2. **Policy Iteration**
-The value function is iteratively updated based on the current policy until convergence.
+Row 0 column 1 corresponding to the blue special state and row 0 column 4 have the highest value functions as shown below:
 
    ```
    [[ 2.17050563  4.73313425  2.06972222  1.2647418   1.77863494]
@@ -74,7 +74,7 @@ The value function is iteratively updated based on the current policy until conv
 
 3. **Value Iteration**
 
-Value iteration combines policy evaluation and improvement in each step to iteratively update the value function until convergence.
+This is similar to the that of policy iteration, row 0 column 1 corresponding to the blue special state has the highest value function.
 
    ```
    [[ 2.17050563  4.73313425  2.06972222  1.2647418   1.77863494]
@@ -89,6 +89,7 @@ The optimal policy is derived by solving the Bellman optimality equations and de
 
 1. **Explicitly Solving the Bellman Optimality Equation**
 
+ The resulting policy function is consistent with the expected behavior, directing the agent towards states with higher rewards as shown:  
    ```
    [[1 0 1 2 0]
     [3 2 2 3 1]
@@ -99,7 +100,7 @@ The optimal policy is derived by solving the Bellman optimality equations and de
 
 2. **Policy Iteration**
 
-   This method involves alternating between policy evaluation and policy improvement until the policy converges to the optimal strategy.
+This produced an optimal policy that aligns closely with the results obtained from explicitly solving the Bellman equations. Here, the technique ensures that the policy converges to the optimal strategy, emphasizing actions that lead to higher cumulative rewards.
 
    ```
    [[3 0 2 2 0]
@@ -111,7 +112,7 @@ The optimal policy is derived by solving the Bellman optimality equations and de
 
 3. **Value Iteration**
 
-   Value iteration combines policy evaluation and improvement in each step to derive the optimal policy.
+This yielded an optimal policy that is similar to those obtained from the other methods.
 
    ```
    [[3 0 2 2 0]
