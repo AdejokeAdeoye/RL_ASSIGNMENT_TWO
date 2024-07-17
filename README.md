@@ -86,8 +86,8 @@ The use of importance sampling weights allowed for effective policy learning eve
 The policy iteration method considering state permutations resulted in a more robust policy that could adapt to the dynamic environment. The value function showed a smoother gradient, reflecting the agent’s adaptability to the stochastic changes in the environment.
 
 ## Conclusion
-In part 1, All three methods (explicitly solving the Bellman optimality equation, policy iteration, and value iteration) produced similar optimal policies. This consistency is expected as all methods are grounded in the principles of Bellman’s equations. The optimal policies derived from each approach guide the agent towards maximizing cumulative rewards by strategically navigating the grid world environment.
+In part 1, all three methods (explicitly solving the Bellman optimality equation, policy iteration, and value iteration) produced similar optimal policies. This consistency is expected as all methods are grounded in the principles of Bellman’s equations. The optimal policies derived from each approach guide the agent towards maximizing cumulative rewards by strategically navigating the grid world environment.
 
-In the second part of the analysis, The Monte Carlo methods, both with exploring starts and epsilon-soft approaches, provided reliable policies by ensuring sufficient exploration. The off-policy control method effectively utilized importance sampling to learn from a behaviour policy. The policy iteration with state permutations highlighted the importance of adaptability in dynamic environments, leading to a robust policy that could handle stochastic changes.
+In the second part of the analysis, Monte Carlo methods, both with exploring starts and epsilon-soft approaches, provided reliable policies by ensuring sufficient exploration. The off-policy control method effectively utilized importance sampling to learn from a behaviour policy. The policy iteration with state permutations highlighted the importance of adaptability in dynamic environments, leading to a robust policy that could handle stochastic changes.
 
 
