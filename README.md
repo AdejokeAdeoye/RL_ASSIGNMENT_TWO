@@ -5,9 +5,11 @@
 ## Table of Contents
 - [Introduction](#introduction)
 - [Project Environment](#project-environment)
-- [Methodology](#methodology)
-  - [Estimating the Value Functions](#estimating-the-value-functions)
-  - [Estimating the Policy Functions](#estimating-the-policy-functions)
+- [Techniques](#techniques)
+  - [Bellman Optimality Equation](#bellman-optimality-equation)
+  - [Policy Iteration](#policy-iteration)
+  - [Value Iteration](#value-iteration)
+
 - [Conclusion](#conclusion)
 
 ## Introduction
