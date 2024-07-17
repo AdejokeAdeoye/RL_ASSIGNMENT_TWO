@@ -22,13 +22,13 @@ Each cell in the 5 × 5 grid represents a distinct state of the grid world ( def
 - The Green state at (0, 4) yields a reward of 2.5 and jumps to either the red state at (4, 2) or the yellow state at (4, 4) with equal probability.
 - The agent receives a reward of -0.5 for attempting to move off the grid.
 
-# Bellman Optimality Equation
-Determining the action that maximizes the value function for each state.
+#### Bellman Optimality Equation
+Determining the action that maximizes the value function for each state. 
 
-# Policy Iteration
+#### Policy Iteration
 Iteratively evaluating the current policy and updating the value function until it converges.
 
-# Value Iteration
+#### Value Iteration
 Combining both policy evaluation and improvement in each step, iteratively updating the value function until it converges.
 
 ## Conclusion
