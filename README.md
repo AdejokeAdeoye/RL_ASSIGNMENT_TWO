@@ -82,9 +82,10 @@ Value iteration combines policy evaluation and improvement in each step to itera
     [ 0.16233064  0.4774194   0.35149327  0.10995335 -0.18667498]
     [-0.54743232 -0.28517851 -0.28086782 -0.44038779 -0.74479522]
     [-1.10830381 -0.84979943 -0.80844074 -0.93845676 -1.23770453]]
-
+ ```
 
 #### Policy Functions
+The optimal policy is derived by solving the Bellman optimality equations and determining the action that maximizes the value function for each state.
 
 1. **Explicitly Solving the Bellman Optimality Equation**
 
